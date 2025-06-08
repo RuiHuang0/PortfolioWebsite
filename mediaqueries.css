@@ -1,0 +1,20 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav{
+        display: flex;
+    }
+
+}
+@media screen and (min-width: 1700px ) {
+    .experience-detail-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 25vh;
+        margin-left: 25vh;
+
+    }
+}

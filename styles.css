@@ -1,0 +1,447 @@
+/*General Styling*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85,85,85);
+}
+
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+/*Navbar Styling*/
+
+nav, .nav-links{
+    display: flex;  /*Element wird zum Container gemacht Kinder kriegen flexibles layout
+                    z.B können nebeneinander geordnet werden*/
+}
+
+
+nav{
+    justify-content: space-around; /*elemente im flexcontainer kriegen equidistanten abstand zueinnander*/
+    align-items: center; /* aligns the elements vertically*/
+    height: 17vh;
+}*
+
+.nav-links{
+    gap: 2rem; /*when we got an ul which is a flexcontainer gap assigne the gap between them*/
+    list-style: none;
+    font-size: 1.5rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181,181,181);
+}
+
+.logo{
+    font-size: 2rem;
+
+}
+.logo:hover{
+    cursor: default; /* when hover over logo nothing happens with the mouse*/
+}
+
+/* Hamburgermenu */
+
+#hamburger-nav{
+    display: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon{
+    display: flex;
+    flex-direction: column; /*ordnet die child elemente vom vaterflexcontainer spaltenweise*/
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.8s ease-in-out;
+}
+
+.menu-links{
+    position: absolute; /* reference point is nearest ancestor that means hamburger-menu*/
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0; /* combined with overflow it hides the menu for the first*/
+    overflow: hidden;
+    transition: all 2s ease-in-out;
+}
+
+.menu-links a {
+    display: block; /*behaves like a block but inside the fatherclass*/
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0; /*transparency of the element just another word for it*/
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/*Sections*/
+
+section{
+    padding-top: 20vh; /* it is the space outside of the element on the topside*/
+    height: 96vh;
+    margin: 0 10rem;/* first value top and bottom margin 2 value right left margin*/
+    box-sizing: border-box; /* the height consists of content and padding if needed content will be shrinked*/
+    min-height: fit-content;/*ensure content never overflows*/
+}
+
+.section-container{
+    display: flex;
+}
+
+/*Profile Section*/
+
+#profile {
+    display: flex;
+    justify-content: center; /* all items of the container is grouped and
+                             the center from it is taken*/
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container{
+    display: flex; /* flex-container prevents images from overflowing*/
+    height: 400px; /*images are inline elements by default and ignore height if
+                    accessed from outside this case <div>*/
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1{
+    text-align: center;
+}
+
+.section__text__p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+/*Icon*/
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+/*gecheckt bis hier*/
+/*Buttons*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* class="btn btn-xxx" means it has 2 classes*/
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color1,
+.btn-color2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color1,
+.btn-color2 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color1:hover,
+.btn-color2:hover {
+    cursor: pointer;
+}
+
+.btn-color1,
+.btn-color2.hover {
+    background: rgb(53,53,53);
+    color: white;
+}
+
+.btn-color1:hover {
+    background-color: white;
+}
+
+.btn-color2{
+    background: none;
+}
+
+.btn-color2:hover{
+    border: rgb(255,255,255) 0.1rem solid;
+    background-color: black;
+}
+
+.btn-container{
+    gap: 1rem;
+}
+/*checked till here*/
+
+
+/* About Section */
+
+#about{
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers,
+.about-details-container{
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(163,163,163) ;
+    text-align: center;
+
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/*Experience Section*/
+
+#experience{
+    position: relative;
+}
+
+.experience-sub-title{
+    color: rgb(85,85,85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom:2rem ;
+}
+
+.experience-detail-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+article .icon{
+    cursor: default;
+}
+/*Projects*/
+
+#projects{
+    position: relative;
+}
+.color-container{
+    border-color: rgb(163,163,163);
+    background: rgb(250,250,250);
+}
+
+.project-img{
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title{
+    margin: 1rem;
+    color: black;
+}
+
+.project-btn{
+    color: black;
+    border-color: rgb(163,163,163);
+}
+
+/*Contact*/
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53,53,53) solid;
+    border-color: rgb(163,163,163);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+.contact-info-container p{
+    font-size: large;
+}
+.contact-icon{
+    cursor: default;
+    height: 2rem;
+}
+
+#contact{
+    margin-top: 250px;
+    padding-top: 50px;
+}
+
+/*Footer*/
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+footer p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
