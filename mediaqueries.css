@@ -1,13 +1,4 @@
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
 
-    #hamburger-nav{
-        display: flex;
-    }
-
-}
 @media screen and (min-width: 1700px ) {
     .experience-detail-container{
         display: flex;
@@ -16,5 +7,15 @@
         margin-right: 25vh;
         margin-left: 25vh;
 
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav{
+        display: flex;
     }
 }
