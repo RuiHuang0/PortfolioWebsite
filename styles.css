@@ -187,6 +187,7 @@ section{
 
 .section__text__p1{
     text-align: center;
+
 }
 
 .section__text__p2{
@@ -365,6 +366,8 @@ article .icon{
 
 #projects{
     position: relative;
+    padding-top: 0rem
+;
 }
 .color-container{
     border-color: rgb(163,163,163);
