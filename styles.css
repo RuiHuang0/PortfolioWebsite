@@ -366,7 +366,9 @@ article .icon{
 
 #projects{
     position: relative;
-    padding-top: 0rem
+    padding-top: 0rem;
+    margin-top: 10rem;
+
 ;
 }
 .color-container{
