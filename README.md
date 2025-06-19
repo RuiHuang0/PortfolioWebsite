@@ -1,18 +1,16 @@
-#Portfolio
-This is the github repo of my personal portfolio website.
+# Rui Huang | Portfolio
 
+This is the GitHub repository for my personal portfolio website.
 
-Used technologies
-Front-End:
+## Visit My Website
 
-HTML,
-CSS
-JavaScript + jQuery
-Back-End:
+You can visit my live portfolio here:
+[https://rui-huang.netlify.app/](https://rui-huang.netlify.app/)
 
-PHP
-MySQL
-Other:
+## Technologies Used
 
-Composer (Package Management)
-Apache2 (Web-Server)
+### Front-End:
+* HTML
+* CSS
+* JavaScript
+* React
