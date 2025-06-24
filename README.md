@@ -13,5 +13,4 @@ You can visit my live portfolio here:
 * HTML
 * CSS
 * JavaScript
-* React
 
